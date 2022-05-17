@@ -1,5 +1,4 @@
-const { builtinModules } = require("module");
-const {User, Thought} = require("../models");
+const { User, Thought } = require("../models");
 const userController = {
 //GET ALL USERS - SORT BY ID
     getAllUser(req, res) {

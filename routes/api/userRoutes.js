@@ -30,4 +30,4 @@ router
     .delete(removeFriend) //Remove friend by user ID
 
 
-module.exports = router;
+module.exports = router
