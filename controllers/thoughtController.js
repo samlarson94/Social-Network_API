@@ -77,7 +77,7 @@ addReaction({ params, body }, res) {
     .catch(err => res.json(err));
 },
 //DELETE THOUGHT - And associated responses.
-removeThought({ params }, res) {
+deleteThought({ params }, res) {
     Thought.findOneAndDelete({ _id: params.thoughtId })
         .then(deletedThought => {
             if (!deletedThought) {
