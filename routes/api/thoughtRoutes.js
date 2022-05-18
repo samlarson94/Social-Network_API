@@ -23,11 +23,15 @@ router
     .put(updateThought) // Update single thought by ID
     .delete(deleteThought); // Delete a single thought
 
-// Endpoint - /api/:thoughtID/reactions/:reactionID
+// Endpoint - /api/:thoughtID/reactions
 router 
-    .route('/:thoughtId/reactions/:reactonId')
+    .route('/:thoughtId/reactions')
     .post(addReaction) //Add reaction to thought by thoughtID
+
+// Endpoint - /api/:thoughtID/reactions/:reactionID
+router
+    .route('/:thoughtId/reactions/:reactionId')
     .delete(deleteReaction) //Delete reaction to thought by thoughtID
 
 
-module.exports = router
+module.exports = router;
