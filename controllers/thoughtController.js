@@ -1,7 +1,7 @@
 const { User, Thought } = require("../models");
 const thoughtController = {
 //GET ALL THOUGHTS
-    getAllThought(req, res) {
+getAllThought(req, res) {
         Thought.find({})
           .select("-__v")
           .sort({ _createdAt: -1 })
@@ -15,7 +15,7 @@ const thoughtController = {
 getThoughtbyId({ params }, res) {
     Thought.findOne({ _id: params.thoughtId })
       .select("-__v")
-      .then((dbThoughtData) => res.json(dbThoughtData))
+      .then(dbThoughtData => res.json(dbThoughtData))
       .catch((err) => {
         console.log(err);
         res.sendStatus(400);
@@ -100,4 +100,4 @@ deleteReaction({ params }, res) {
     }
 };
 
-modules.exports = thoughtController;
+module.exports = thoughtController;

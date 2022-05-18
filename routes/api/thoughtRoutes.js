@@ -2,7 +2,7 @@ const router = require('express').Router();
 const {
    //Add all thought controllers here
     getAllThought,
-    getThoughtById,
+    getThoughtbyId,
     addThought,
     updateThought,
     addReaction,
@@ -19,7 +19,7 @@ router
 // Endpoint - /api/thought/:thoughtID
 router
     .route('/:thoughtId')
-    .get(getThoughtById) //Get single thought by ID
+    .get(getThoughtbyId) //Get single thought by ID
     .put(updateThought) // Update single thought by ID
     .delete(deleteThought); // Delete a single thought
 
