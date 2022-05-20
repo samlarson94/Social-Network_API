@@ -1,11 +1,7 @@
+// const mongoose = require('mongoose');
 const { connect, connection } = require('mongoose');
 
-//Revisit after creating Heroku application
-
-// const connectionString =
-//   process.env.MONGODB_URI || 'mongodb://localhost:27017/studentsDB';
-
-connect('mongodb://localhost/commentExample', {
+connect('mongodb://localhost/avengersdb', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });

@@ -1,5 +1,5 @@
 const { Schema, model } = require("mongoose");
-const { moveMessagePortToContext } = require("worker_threads");
+// const { moveMessagePortToContext } = require("worker_threads");
 const moment = require('moment');
 
 // Reaction Schema - Subdocument of Thought Schema
@@ -21,7 +21,7 @@ const reactionSchema = new Schema(
     createdAt: {
         type: Date,
         default: Date.now,
-        get: createdAtVal => moveMessagePortToContext(createdAtVal).format('MM DD, YYYY [a] hh:mm a'),
+        get: createdAtVal => moment(createdAtVal).format('MM DD, YYYY [a] hh:mm a'),
     }
 
 });
@@ -38,7 +38,7 @@ const ThoughtSchema = new Schema(
     createdAt: {
         type: Date,
         default: Date.now,
-        get: createdAtVal => moveMessagePortToContext(createdAtVal).format('MM DD, YYYY [a] hh:mm a'),
+        get: createdAtVal => moment(createdAtVal).format('MM DD, YYYY [a] hh:mm a'),
         
     },
     username: 

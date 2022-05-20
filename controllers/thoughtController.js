@@ -5,7 +5,7 @@ getAllThought(req, res) {
         Thought.find({})
           .select("-__v")
           .sort({ _createdAt: -1 })
-          .then((dbThoughtData) => res.json(dbThoughtData))
+          .then(dbThoughtData => res.json(dbThoughtData))
           .catch((err) => {
             console.log(err);
             res.sendStatus(400);
@@ -23,7 +23,7 @@ getThoughtbyId({ params }, res) {
   },
 
 //ADD A THOUGHT
-  // After creating, update corresponding User information
+  // Also need to update corresponding User information
 addThought({ params, body }, res) {
     console.log(params);
     Thought.create(body)
