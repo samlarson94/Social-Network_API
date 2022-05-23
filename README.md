@@ -14,7 +14,7 @@ Once the repo has been cloned and all dependencies have been installed. You can 
 Once operational, open up Insomnia, Postman, or another API design platform of your choosing to start interacting with the data using GET, POST, PUT, and DELETE commands.  See the comments in each Routes.js file for specific endpoints.
 
 ## Video Walkthrough
-
+See a preliminary video walkthrough of this project [here](https://drive.google.com/file/d/1bppzEFXe80TeT6bWZPQDdgFMcTeho5gP/view?usp=sharing).
 
 ## Future Development
 After debugging has been completed on the backend, it would be interesting to start building out a front-end for this app. Homeroutes and a basic user interface is where I would like to start when I have time.
